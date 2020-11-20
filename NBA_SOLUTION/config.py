@@ -1,0 +1,1 @@
+URI = "postgres://postgres:Carlos@0000@35.192.83.205:5432/nba_app"
