@@ -72,9 +72,9 @@
 # #     #         for column in self. __table__.columns
 # #     #     }
 
-# class season_atl(db.Model):
-#     season_id = db.Column(db.Float)
-#     team_id= db.Column(db.Float)
+# # class season_atl(db.Model):
+# #     season_id = db.Column(db.Float)
+# #     team_id= db.Column(db.Float)
 # #     team_abbreviation = db.Column(db.String(10)) 
 # #     team_name = db.Column(db.String(30)) 
 # #     game_id = db.Column(db.Integer, primary_key=True) 

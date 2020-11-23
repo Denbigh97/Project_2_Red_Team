@@ -54,3 +54,45 @@ ORDER BY total_games_loss DESC;
 Count oof Win and Loss for each season
 Score with each oponent for each season
 
+- DROP TABLE public."Cleaned_data11.21";
+
+CREATE TABLE public."Cleaned_data11.21"
+(
+    "SEASON_ID" bigint,
+    "TEAM_ID" bigint,
+    "TEAM_ABBREVIATION" text COLLATE pg_catalog."default",
+    "TEAM_NAME" text COLLATE pg_catalog."default",
+    "GAME_ID" bigint,
+    "GAME_DATE" text COLLATE pg_catalog."default",
+    "MATCHUP" text COLLATE pg_catalog."default",
+    "WL" text COLLATE pg_catalog."default",
+    "MIN" bigint,
+    "PTS" bigint,
+    "FGM" bigint,
+    "FGA" bigint,
+    "FG_PCT" double precision,
+    "FG3M" bigint,
+    "FG3A" bigint,
+    "FG3_PCT" double precision,
+    "FTM" bigint,
+    "FTA" bigint,
+    "FT_PCT" double precision,
+    "OREB" bigint,
+    "DREB" bigint,
+    "REB" bigint,
+    "AST" bigint,
+    "STL" bigint,
+    "BLK" bigint,
+    "TOV" bigint,
+    "PF" bigint,
+    "PLUS_MINUS" double precision,
+    "Is_Win" bigint,
+    "Is_Loss" bigint,
+    "Home_Away" text COLLATE pg_catalog."default",
+    "Opponent" text COLLATE pg_catalog."default"
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public."Cleaned_data11.21"
+    OWNER to postgres;
