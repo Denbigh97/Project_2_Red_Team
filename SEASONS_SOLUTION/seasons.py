@@ -24,6 +24,7 @@ for file in os.listdir(ROOT):
     print(filepath)
     print(table_name)
     pd.read_csv(filepath).to_sql(table_name, con=engine, index=False, if_exists="replace")
+    
 
 
 
