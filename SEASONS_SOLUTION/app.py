@@ -24,13 +24,7 @@ CONN = os.getenv("CONN")
 print(CONN)
 engine = create_engine(CONN)
 
-for file in os.listdir(ROOT):
-    filepath = os.path.join(ROOT, file)
-    table_name = os.path.splitext(file) [0]
-    print(filepath)
-    print(table_name)
-    pd.read_csv(filepath).to_sql(table_name, con=engine, index=False, if_exists="replace")
-    
+
 class DictMixIn:
     def to_dict(self):
         return {
@@ -42,10 +36,10 @@ class DictMixIn:
             for column in self.__table__.columns
         }
 class seasons(db.Model, DictMixIn):
-    __tablename__ = "Cleaned_data11.21"
+    __tablename__ = "cleaned_data1121"
     
     season_id = db.Column(db.Integer)
-    team_id= db.Column(db.Integer)
+    team_id = db.Column(db.Integer)
     team_abbreviation = db.Column(db.String(10)) 
     team_name = db.Column(db.String(30)) 
     game_id = db.Column(db.Integer, primary_key=True) 
@@ -77,7 +71,8 @@ class seasons(db.Model, DictMixIn):
     home_away = db.Column(db.String(10))
     opponent = db.Column(db.String(10))
 
-db.create_all()
+    
+    
     
 
 @app.route("/")
@@ -87,7 +82,12 @@ def main():
 @app.route("/data")
 def data():
     data = seasons.query.all()
-    return jsonify([{"season_id": Cleaned_data1121.season_id, "team_id": Cleaned_data1121.team_id} for seasons in data])
+    return jsonify([{"season_id": season.season_id, "team_id": season.team_id} for season in data])
+
+# @app.route("/seasons")
+# def seasons():
+#     request
+
 
 if __name__ == "__main__":
     app.run(debug=True)
