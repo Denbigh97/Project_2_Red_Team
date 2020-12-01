@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 from flask_sqlalchemy import SQLAlchemy
 import datetime
 from flask_cors import CORS
@@ -21,7 +21,7 @@ db = SQLAlchemy(app)
 
 ROOT = "./Data"
 CONN = os.getenv("CONN")
-print(CONN)
+
 engine = create_engine(CONN)
 
 
@@ -78,17 +78,19 @@ class seasons(db.Model, DictMixIn):
 def main():
     return "<html><h1>NBA DATA ANALYTICS</h1><html>"
 
+
 # @app.route("/data")
 # def data():
 #     data = seasons.query.all()
 #     return jsonify([{"season_id": season.season_id, "team_id": season.team_id} for season in data])
+
 
 @app.route("/HOU_Away")
 def query_by_hou_away():
     team_name = request.args.get("team_name")
     q = seasons.query
     
-    return jsonify(
+    return jsonify(  
         [
             {
                 "season_id": season.season_id,
