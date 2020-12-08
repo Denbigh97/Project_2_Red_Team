@@ -1,1 +1,1 @@
-web: gunicorn SEASONS_SOLUTION.app:app
+web: gunicorn solution.app:app
