@@ -79,11 +79,11 @@ def home():
     """Serve homepage template."""
     return render_template("index.html")   
 
-@app.route("team.html")
+@app.route("/team.html")
 def Projectteam():
     return Projectteam
 
-@app.route("hawks.html")
+@app.route("/hawks.html")
 def hawks():
     return hawkspage
 
