@@ -74,7 +74,7 @@ class seasons(db.Model, DictMixIn):
     opponent = db.Column(db.String(10))
 
     
- @app.route("/")
+@app.route("/")
 def home():
     """Serve homepage template."""
     return render_template("index.html")   
