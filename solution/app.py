@@ -4,7 +4,7 @@ import datetime
 from flask_cors import CORS
 import csv
 import os
-# from config import URI  
+from config import URI  
 import pandas as pd
 from sqlalchemy import create_engine
 
@@ -21,10 +21,10 @@ app.config["SQLALCHEMY_DATABASE_URI"] = URI
 
 db = SQLAlchemy(app)
 
-ROOT = "./Data"
-CONN = os.getenv("CONN")
+# ROOT = "./Data"
+# CONN = os.getenv("CONN")
 
-engine = create_engine(CONN)
+# engine = create_engine(CONN)
 
 
 class DictMixIn:
