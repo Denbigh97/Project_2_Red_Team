@@ -81,7 +81,7 @@ class seasons(db.Model, DictMixIn):
 #     return "<html><h1>NBA DATA ANALYTICS</h1><html>"
 
 @app.route("/")
-def home():
+def main():
     return render_template("index.html")
 
 # @app.route("/data")
