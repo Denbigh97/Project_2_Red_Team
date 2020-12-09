@@ -79,17 +79,21 @@ def home():
     """Serve homepage template."""
     return render_template("index.html")   
 
-@app.route("/team.html")
+@app.route("/templates/team.html")
 def Projectteam():
     return Projectteam
 
-@app.route("/hawks.html")
+@app.route("/templates/hawks.html")
 def hawks():
     return hawkspage
 
-@app.route("/celtics.html")
+@app.route("/templates/celtics.html")
 def celtics():
     return celticspage
+
+@app.route("/templates/nets.html")
+def nets():
+    return render_template("nets.html") 
 
 # @app.route("/data")
 # def data():
