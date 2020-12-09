@@ -4,7 +4,7 @@ import datetime
 from flask_cors import CORS
 import csv
 import os
-from config import URI  
+# from config import URI  
 import pandas as pd
 from sqlalchemy import create_engine
 
