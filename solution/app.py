@@ -8,8 +8,8 @@ import os
 import pandas as pd
 from sqlalchemy import create_engine
 
-
-app = Flask(__name__)
+app = Flask(__name__, template_folder="templates")
+# app = Flask(__name__)
 
 # app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -81,7 +81,7 @@ class seasons(db.Model, DictMixIn):
 #     return "<html><h1>NBA DATA ANALYTICS</h1><html>"
 
 @app.route("/")
-def homepage():
+def home():
     return render_template("index.html")
 
 # @app.route("/data")
