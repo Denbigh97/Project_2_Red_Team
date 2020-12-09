@@ -4,14 +4,14 @@ import datetime
 from flask_cors import CORS
 import csv
 import os
-from config import URI  
+# from config import URI  
 import pandas as pd
 from sqlalchemy import create_engine
 
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 CORS(app)
 
