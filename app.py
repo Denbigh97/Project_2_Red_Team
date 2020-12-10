@@ -80,8 +80,8 @@ def home():
     return render_template("index.html")   
 
 @app.route("/templates/team.html")
-def Projectteam():
-    return render_template("team.html")  
+def members():
+    return members  
 
 @app.route("/templates/hawks.html")
 def hawks():
