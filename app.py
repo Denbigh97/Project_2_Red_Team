@@ -204,43 +204,43 @@ def wizards():
     return render_template("wizards.html")
 
 @app.route("/templates/Players2015_2016.html")
-def players():
+def player1():
     return render_template("Players2015_2016.html")
 
 @app.route("/templates/Players2016_2017.html")
-def players():
+def player2():
     return render_template("Players2016_2017.html")
 
 @app.route("/templates/Players2017_2018.html")
-def players():
+def player3():
     return render_template("Players2017_2018.html")
 
 @app.route("/templates/Players2018_2019.html")
-def players():
+def player4():
     return render_template("Players2018_2019.html")
 
 @app.route("/templates/Players2019_2020.html")
-def players():
+def player5():
     return render_template("Players2019_2020.html")
 
 @app.route("/templates/season_15_16.html")
-def players():
+def season1():
     return render_template("season_15_16.html") 
 
 @app.route("/templates/season_16_17.html")
-def players():
+def season2():
     return render_template("season_16_17.html") 
 
 @app.route("/templates/season_17_18.html")
-def players():
+def season3():
     return render_template("season_17_18.html") 
 
 @app.route("/templates/season_18_19.html")
-def players():
+def season4():
     return render_template("season_18_19.html") 
 
 @app.route("/templates/season_19_20.html")
-def players():
+def season5():
     return render_template("season_19_20.html") 
 
 
