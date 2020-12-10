@@ -85,7 +85,7 @@ def Projectteam():
 
 @app.route("/templates/hawks.html")
 def hawks():
-    return render_template("hawks.html")"
+    return render_template("hawks.html")
 
 @app.route("/templates/celtics.html")
 def celtics():
