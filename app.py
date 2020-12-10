@@ -81,7 +81,7 @@ def home():
 
 @app.route("/templates/team.html")
 def members():
-    return members  
+    return render_template("team.html")
 
 @app.route("/templates/hawks.html")
 def hawks():
@@ -173,7 +173,7 @@ def magic():
 
 @app.route("/templates/76ers.html")
 def Phi():
-    return render_template("76ers.html")
+    return ('76ers.html')
 
 @app.route("/templates/suns.html")
 def suns():
