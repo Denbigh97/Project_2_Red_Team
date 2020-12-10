@@ -81,19 +81,171 @@ def home():
 
 @app.route("/templates/team.html")
 def Projectteam():
-    return Projectteam
+    return render_template("team.html")  
 
 @app.route("/templates/hawks.html")
 def hawks():
-    return hawkspage
+    return render_template("hawks.html")"
 
 @app.route("/templates/celtics.html")
 def celtics():
-    return celticspage
+    return render_template("celtics.html")
 
 @app.route("/templates/nets.html")
 def nets():
-    return render_template("nets.html") 
+    return render_template("nets.html")
+
+@app.route("/templates/hornets.html")
+def hornets():
+    return render_template("hornets.html")
+
+@app.route("/templates/bulls.html")
+def bulls():
+    return render_template("bulls.html")
+
+@app.route("/templates/cavaliers.html")
+def cavaliers():
+    return render_template("cavaliers.html")
+
+@app.route("/templates/mavericks.html")
+def mavericks():
+    return render_template("mavericks.html")
+
+@app.route("/templates/nuggets.html")
+def nuggets():
+    return render_template("nuggets.html")
+
+@app.route("/templates/pistons.html")
+def pistons():
+    return render_template("pistons.html")
+
+@app.route("/templates/warriors.html")
+def warriors():
+    return render_template("warriors.html")
+
+@app.route("/templates/rockets.html")
+def rockets():
+    return render_template("rockets.html")
+
+@app.route("/templates/pacers.html")
+def pacers():
+    return render_template("pacers.html")
+
+@app.route("/templates/clippers.html")
+def clippers():
+    return render_template("clippers.html")
+
+@app.route("/templates/lakers.html")
+def lakers():
+    return render_template("lakers.html")
+
+@app.route("/templates/grizzlies.html")
+def grizzlies():
+    return render_template("grizzlies.html")
+
+@app.route("/templates/heat.html")
+def heat():
+    return render_template("heat.html")
+
+@app.route("/templates/bucks.html")
+def bucks():
+    return render_template("bucks.html")
+
+@app.route("/templates/timberwolves.html")
+def timberwolves():
+    return render_template("timberwolves.html")
+
+@app.route("/templates/pelicans.html")
+def pelicans():
+    return render_template("pelicans.html")
+
+@app.route("/templates/knicks.html")
+def knicks():
+    return render_template("knicks.html")
+
+@app.route("/templates/thunder.html")
+def thunder():
+    return render_template("thunder.html")
+
+@app.route("/templates/magic.html")
+def magic():
+    return render_template("magic.html")
+
+@app.route("/templates/76ers.html")
+def Phi():
+    return render_template("76ers.html")
+
+@app.route("/templates/suns.html")
+def suns():
+    return render_template("suns.html")
+
+@app.route("/templates/blazers.html")
+def blazers():
+    return render_template("blazers.html")
+
+@app.route("/templates/kings.html")
+def kings():
+    return render_template("kings.html")
+
+@app.route("/templates/spurs.html")
+def spurs():
+    return render_template("spurs.html")
+
+@app.route("/templates/raptors.html")
+def raptors():
+    return render_template("raptors.html")
+
+@app.route("/templates/jazz.html")
+def jazz():
+    return render_template("jazz.html")
+
+@app.route("/templates/wizards.html")
+def wizards():
+    return render_template("wizards.html")
+
+@app.route("/templates/Players2015_2016.html")
+def players():
+    return render_template("Players2015_2016.html")
+
+@app.route("/templates/Players2016_2017.html")
+def players():
+    return render_template("Players2016_2017.html")
+
+@app.route("/templates/Players2017_2018.html")
+def players():
+    return render_template("Players2017_2018.html")
+
+@app.route("/templates/Players2018_2019.html")
+def players():
+    return render_template("Players2018_2019.html")
+
+@app.route("/templates/Players2019_2020.html")
+def players():
+    return render_template("Players2019_2020.html")
+
+@app.route("/templates/season_15_16.html")
+def players():
+    return render_template("season_15_16.html") 
+
+@app.route("/templates/season_16_17.html")
+def players():
+    return render_template("season_16_17.html") 
+
+@app.route("/templates/season_17_18.html")
+def players():
+    return render_template("season_17_18.html") 
+
+@app.route("/templates/season_18_19.html")
+def players():
+    return render_template("season_18_19.html") 
+
+@app.route("/templates/season_19_20.html")
+def players():
+    return render_template("season_19_20.html") 
+
+
+
+
 
 # @app.route("/data")
 # def data():
