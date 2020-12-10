@@ -169,7 +169,7 @@ def thunder():
 
 @app.route("/templates/magic.html")
 def magic():
-    return render_template("magic.html")
+    return "magic.html"
 
 @app.route("/templates/76ers.html")
 def Phi():
