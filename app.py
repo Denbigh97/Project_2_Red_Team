@@ -84,7 +84,7 @@ def analysis():
     return render_template("analysis.html")
 
 @app.route("/templates/team.html")
-def analysis():
+def team():
     return render_template("team.html")   
 
 @app.route("/templates/hawks.html")
