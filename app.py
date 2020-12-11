@@ -83,6 +83,10 @@ def home():
 def analysis():
     return render_template("analysis.html")
 
+@app.route("/templates/team.html")
+def analysis():
+    return render_template("team.html")   
+
 @app.route("/templates/hawks.html")
 def hawks():
     return render_template("hawks.html")
