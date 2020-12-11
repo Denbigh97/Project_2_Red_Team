@@ -79,9 +79,9 @@ def home():
     """Serve homepage template."""
     return render_template("index.html")   
 
-@app.route("/templates/team.html")
-def members():
-    return render_template("team.html")
+@app.route("/templates/analysis.html")
+def analysis():
+    return render_template("analysis.html")
 
 @app.route("/templates/hawks.html")
 def hawks():
