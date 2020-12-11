@@ -11,7 +11,7 @@ from sqlalchemy import create_engine
 app = Flask(__name__, template_folder="templates")
 # app = Flask(__name__)
 
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 CORS(app)
 
