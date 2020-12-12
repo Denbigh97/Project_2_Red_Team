@@ -1,6 +1,8 @@
 # Project_2_Red_Team
 Project 2 UT Bootcamp
 
+https://nba-projectred.herokuapp.com/
+
 ***Roles *** Current always changing
 
 * Project Manager--Jayeeta, 
