@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="static/assets/img/nba.png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>NBA Data Analytics</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <!-- define Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- Bootstrap core CSS     -->
+    <!-- <link href="./templates/bootstrap.min.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+
+    <!-- Animation library for notifications   -->
+    <link href="static/assets/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="static/assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <!-- <link href="static/assets/css/demo.css" rel="stylesheet" /> -->
+
+    <!--     Fonts and icons     -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="static/assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <!-- map css -->
+    <link href="static/assets/css/styleChloro.css" rel="stylesheet" />
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="crossorigin=""></script>
+
+    <!--D3 cdn-->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.2/d3.js"></script>
+    <script type="text/javascript" src="static/assets/js/plot.js"></script>
+    <style type="text/css">
+        .custom {
+            font-family: Roboto,Arial,sans-serif;
+            color: rgb(255, 255, 255);
+            font-size:20px;
+        }
+        </style>
+    
+
+</head>
+<body>
+
+
+    <div class="wrapper">
+        <div class="sidebar" data-color="black" data-image="static/assets/img/nba.png">
+    
+        <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
+    
+    
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <a href="#" class="custom">
+                        NBA Data Analytics 
+                    </a>
+                </div>
+    
+                <ul class="nav">
+                    <li class="active">
+                        <a href="/">
+                            <i class="pe-7s-graph"></i>
+                            <p>Home</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="templates\team.html">
+                            <i class="pe-7s-users"></i>
+                            <p>Project Members</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="templates\analysis.html">
+                            <i class="pe-7s-note2"></i>
+                            <p>Analysis</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="main-panel">
+            <nav class="navbar navbar-default navbar-fixed" style="background-color: #021b2b;">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">
+                            <span class="custom">Home</span>
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li class="dropdown">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                  </a>
+                                  <ul class="dropdown-menu">
+
+                                  </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <p>
+                                            <span class="custom">Teams</span>
+                                            
+                                            <b class="caret"></b>
+                                        </p>
+    
+                                  </a>
+                                  <ul class="dropdown-menu">
+                                    <li class="menu-item"><a href="templates\hawks.html">Atlanta Hawks</a></li>
+                                    <li class="menu-item"><a href="templates\celtics.html">Boston Celtics</a></li>
+                                    <li class="menu-item"><a href="templates\nets.html">Brooklyn Nets</a></li>
+                                    <li class="menu-item"><a href="templates\hornets.html">Charlotte Hornets</a></li>
+                                    <li class="menu-item"><a href="templates\bulls.html">Chicago Bulls</a></li>
+                                    <li class="menu-item"><a href="templates\cavaliers.html">Cleveland Cavaliers</a></li>
+                                    <li class="menu-item"><a href="templates\mavericks.html">Dallas Mavericks</a></li>
+                                    <li class="menu-item"><a href="templates\nuggets.html">Denver Nuggets</a></li>
+                                    <li class="menu-item"><a href="templates\pistons.html">Detroit Pistons</a></li>
+                                    <li class="menu-item"><a href="templates\warriors.html">Golden State Warriors</a></li>
+                                    <li class="menu-item"><a href="templates\rockets.html">Houston Rockets</a></li>
+                                    <li class="menu-item"><a href="templates\pacers.html">Indiana Pacers</a></li>
+                                    <li class="menu-item"><a href="templates\clippers.html">LA Clippers</a></li>
+                                    <li class="menu-item"><a href="templates\lakers.html">Los Angeles Lakers</a></li>
+                                    <li class="menu-item"><a href="templates\grizzlies.html">Memphis Grizzlies</a></li>
+                                    <li class="menu-item"><a href="templates\heat.html">Miami Heat</a></li>
+                                    <li class="menu-item"><a href="templates\bucks.html">Milwaukee Bucks</a></li>
+                                    <li class="menu-item"><a href="templates\timberwolves.html">Minnesota Timberwolves</a></li>
+                                    <li class="menu-item"><a href="templates\pelicans.html">New Orleans Pelicans</a></li>
+                                    <li class="menu-item"><a href="templates\knicks.html">New York Knicks</a></li>
+                                    <li class="menu-item"><a href="templates\thunder.html">Oklahoma City Thunder</a></li>
+                                    <li class="menu-item"><a href="templates\magic.html">Orlando Magic</a></li>
+                                    <li class="menu-item"><a href="templates\76ers.html">Philadelphia 76ers</a></li>
+                                    <li class="menu-item"><a href="templates\suns.html">Phoenix Suns</a></li>
+                                    <li class="menu-item"><a href="templates\blazers.html">Portland Trail Blazers</a></li>
+                                    <li class="menu-item"><a href="templates\kings.html">Sacramento Kings</a></li>
+                                    <li class="menu-item"><a href="templates\spurs.html">San Antonio Spurs</a></li>
+                                    <li class="menu-item"><a href="templates\raptors.html">Toronto Raptors</a></li>
+                                    <li class="menu-item"><a href="templates\jazz.html">Utah Jazz</a></li>
+                                    <li class="menu-item"><a href="templates\wizards.html">Washington Wizards</a></li>
+                                  </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <p>
+                                            <span class="custom">Players</span>
+                                            
+                                            <b class="caret"></b>
+                                        </p>
+    
+                                  </a>
+                                  <ul class="dropdown-menu">
+                                    <li class="menu-item"><a href="templates\Players2015_2016.html">Players2015-2016</a></li>
+                                    <li class="menu-item"><a href="templates\Players2016_2017.html">Players2016-2017</a></li>
+                                    <li class="menu-item"><a href="templates\Players2017_2018.html">Players2017-2018</a></li>
+                                    <li class="menu-item"><a href="templates\Players2018_2019.html">Players2018-2019</a></li>
+                                    <li class="menu-item"><a href="templates\Players2019_2020.html">Players2019-2020</a></li>
+                                  </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <p>
+                                            <span class="custom">Seasons</span>
+                                            
+                                            <b class="caret"></b>
+                                        </p>
+    
+                                  </a>
+                                  <ul class="dropdown-menu">
+                                    <li class="menu-item"><a href="templates\season_15_16.html">2015 - 2016</a></li>
+                                    <li class="menu-item"><a href="templates\season_16_17.html">2016 - 2017</a></li>
+                                    <li class="menu-item"><a href="templates\season_17_18.html">2017 - 2018</a></li>
+                                    <li class="menu-item"><a href="templates\season_18_19.html">2018 - 2019</a></li>
+                                    <li class="menu-item"><a href="templates\season_19_20.html">2019 - 2020</a></li>
+                                  </ul>
+                            </li>
+                        </ul>
+            </nav>
+    
+        </div>
+        
+        
+        
+        
+        <div class="content">
+            <div class="container-fluid">
+        
+        
+        
+        
+        
+                <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-right">
+                    <ul>
+                        <li>
+                            <a href="/">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="templates\team.html">
+                                Meet Our Team
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Denbigh97/Project_2_Red_Team">
+                                GitHub Repository
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="copyright pull-left">
+                     <a>Project_2_Red_Team</a>
+                </p>
+            </div>
+        </footer>
+
+    </div>
+    
+</body>
+
+    <!--   Core JS Files   -->
+    <script src="static/assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
+	<script src="static/assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<!--  Charts Plugin -->
+	<script src="static/assets/js/chartist.min.js"></script>
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+    <script src="static/assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+    <!-- create data table from by using cleansed data csv -->
+    <script src="static/assets/js/dashboard.js"></script>
+    <!-- API key -->
+    <script type="text/javascript" src="static/assets/js/plot.js"></script>
+    <!-- Choropleth JS -->
+    <script src="static/assets/js/data.js"></script>
+    <script src="static/assets/js/app.js"></script>
+    <!-- Pie Plot JS -->
+    <script type="text/javascript" src=""></script>
+
+</html>
